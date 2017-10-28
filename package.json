@@ -1,7 +1,7 @@
 {
-  "name": "umccontrol",
+  "name": "ptd",
   "version": "1.0.0",
-  "description": "Discord to Pterodactyl/in-game interface for UnraveledMC ",
+  "description": "An interface for connections between the Pterodactyl daemon and Discord.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
