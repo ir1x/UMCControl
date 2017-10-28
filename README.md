@@ -21,3 +21,4 @@ ptd is an interface for connections between the Pterodactyl daemon and Discord.
 	}
 }
 ```
+Originally created [and maintained] by [Ian Murray](https://github.com/IanMurray).
