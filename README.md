@@ -1,7 +1,7 @@
-# UMCControl
-Discord to Pterodactyl/Ingame interface for UnraveledMC 
+# ptd
+ptd is an interface for connections between the Pterodactyl daemon and Discord.
 
-## `config.json` template
+### Configuration
 ```js
  {
 	"discord": {
