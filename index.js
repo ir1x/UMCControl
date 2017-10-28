@@ -16,9 +16,9 @@ var commands = {
 				plys = []
 				r.players.forEach((ply) => plys.push(ply.name));
 				if(plys.length) {
-					msg.reply(`:scroll: The following users are on the server:\n\`\`\`${plys.join(", ")}\`\`\``);
+					msg.reply(`:scroll: The following members are online:\n\`\`\`${plys.join(", ")}\`\`\``);
 				} else {
-					msg.reply(":no_pedestrians: No users are on the server.")
+					msg.reply(":no_pedestrians: No members are online.")
 				}
 			});
 		}
@@ -47,7 +47,7 @@ client.on('message', (msg) => {
 
 	isPleb = msg.member.roles.get(config.discord.privRole) ? false : true
 	if(commands[cmd].privileged && isPleb) {
-		msg.reply(":no_entry_sign: You do not have the role required to run this command.")
+		msg.reply(":no_entry_sign: You don't have permission to execute this command. Are you an administrator?")
 		return;
 	}
 
@@ -65,7 +65,7 @@ function powerCmd(action) {
 	return {
 		"privileged": true,
 		"func": (msg) => callServerAPI("power", {"action": action}, msg, ":warning: An error occurred. The server " + 
-			"may be in the process of completing another power action or already be in that state.")
+			"may be in the process of executing another command. If you're an Executive or higher, check the panel.")
 	}
 }
 
